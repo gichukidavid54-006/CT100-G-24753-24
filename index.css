@@ -1,0 +1,159 @@
+
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+header {
+    background-color: #102a43;
+    color: white;
+    padding: 18px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* Conference introduction */
+.hero {
+    /* min-height: 430px;
+    padding: 80px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #102a43, #2563eb);
+    color: white; */
+    
+    min-height: 430px;
+    padding: 80px 10%;
+    text-align: center;
+
+    /* Colour overlay combined with background image */
+    background-image:
+        linear-gradient(
+            rgba(16, 42, 67, 0.70),
+            rgba(37, 99, 235, 0.65)
+        ),
+        url("kyu\ backgroud.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+}
+
+.hero h1 {
+    font-size: 40px;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Register button */
+.register-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 28px;
+    background-color: #38bdf8;
+    color: #102a43;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+/* About section */
+#about {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#about h2 {
+    color: #102a43;
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    #about {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+}
